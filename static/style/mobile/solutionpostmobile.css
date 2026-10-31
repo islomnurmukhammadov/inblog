@@ -1,0 +1,28 @@
+@media (max-width:768px) {
+    .main-container{
+        padding-top: 17vh;
+    }
+    .container{
+        width: 80%;
+    }
+
+    .container .title{
+        font-size: 22px;
+    }
+    .container .comment p{
+        font-size: 15px;
+    }
+    .container .question{
+        font-size: 15px;
+    }
+
+
+
+    .time{
+        padding-left: 60%;
+
+    }
+    .container .code-box pre code{
+        font-size: 5px;
+    }
+}

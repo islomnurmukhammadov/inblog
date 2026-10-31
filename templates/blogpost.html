@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+{{ post_malumoti.title }}
+{% endblock title %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'style/blogpost.css' %}?v=6">
+<link rel="stylesheet" href="{% static 'style/mobile/blogpostmobile.css' %}?v=7">
+
+{% endblock extra_css %}
+
+{% block content %}
+
+<div class="main-container">
+    <div class="container">
+        <h2 class="title">{{ post_malumoti.title }}</h2>
+        <div class="text">{{ post_malumoti.text|safe }}</div>
+        <div class="time">{{ post_malumoti.time }}</div>
+    </div>
+</div>
+
+{% endblock content %}

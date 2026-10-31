@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Blog
+{% endblock title %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'style/blog.css' %}?v=10">
+<link rel="stylesheet" href="{% static 'style/mobile/blogmobile.css' %}?v=7">
+{% endblock extra_css %}
+
+{% block content %}
+
+<div class="blogs-main-container">
+    <div class="blogs-container">
+        <h2 class="main-text">BLOG</h2>
+        <div class="empty"></div>
+        {% for post in postlar %}
+        <a href="{% url 'post' post.pk %}">
+            <div class="post-card">
+                <h4 class="post-title">{{ post.title|truncatechars:45 }}</h4>
+                <p class="post-time">{{ post.time }}</p>
+            </div>
+        </a>
+        {% empty %}
+        <div class="empty-text">
+            Hozircha postlar yo'q
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock content %}

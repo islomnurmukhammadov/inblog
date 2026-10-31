@@ -1,0 +1,39 @@
+@media (max-width: 768px) {
+
+    .home-container{
+        padding-top: 20vh;
+        padding-left: 0;
+
+    }
+    .main-block{
+        display: block;
+        text-align: center;
+    }
+    .main-block-image{
+        width: 15vh;
+        height: 15vh;
+    }
+    .right-block h2{
+        padding-top: 13px;
+        font-size: 20px;
+    }
+    
+    .right-block p{
+        font-size: 15px;
+    }
+    .right-block .social-links{
+        padding-top: 10px;
+        justify-content: center;
+        gap: 13px;
+    }
+    .right-block .social-links li a{
+        font-size: 22px;
+    }
+    .right-block .down-buttons{
+        justify-content: center;
+    }
+
+    .bottom-c-bar{
+        font-size: 14px;
+    }
+}

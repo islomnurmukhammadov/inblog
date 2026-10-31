@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+{{ yechim_malumoti.title }}
+{% endblock title %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'style/solutionpost.css' %}?v=12">
+<link rel="stylesheet" href="{% static 'style/mobile/solutionpostmobile.css' %}?v=5">
+{% endblock extra_css %}
+
+{% block content %}
+
+<div class="main-container">
+    <div class="container">
+        <h2 class="title">{{ yechim_malumoti.title }}</h2>
+        <div class="question">{{ yechim_malumoti.question }}</div>
+        <div class="code-box">
+            <div class="code-top">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="lang">solution.py</span>
+            </div>
+            <pre><code class="languange-python">{{ yechim_malumoti.code }}</code></pre>
+        </div>
+        <div class="comment">{{ yechim_malumoti.comment|safe }}</div>
+        <div class="time">{{ yechim_malumoti.time }}</div>
+    </div>
+</div>
+
+{% endblock content %}

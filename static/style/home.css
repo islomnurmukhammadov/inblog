@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&display=swap");
+
+
+
+.home-container {
+  padding-top: 30vh;
+  padding-left: 35vh;
+}
+
+.main-block {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 30px;
+  animation: fadeAnimation 1s ease-out;
+}
+
+.main-block-image {
+  width: 20vh;
+  height: 20vh;
+  border-radius: 50vh;
+}
+
+.right-block h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 27px;
+
+  letter-spacing: 1px;
+}
+
+.right-block p {
+  font-family: "Outfit", sans-serif;
+  font-size: 21px;
+  letter-spacing: 1px;
+  padding-top: 3px;
+  color: rgb(65, 64, 64);
+}
+.right-block .social-links {
+  display: flex;
+  gap: 17px;
+  padding-top: 6px;
+  align-items: center;
+}
+
+.right-block .social-links li {
+  list-style: none;
+}
+.right-block .social-links li a {
+  text-decoration: none;
+  color: black;
+  font-size: 27px;
+}
+.right-block .down-buttons {
+  padding-top: 15px;
+  display: flex;
+  gap: 15px;
+}
+.right-block .down-buttons li {
+  list-style: none;
+  border: 1px solid black;
+  border-radius: 100px;
+  align-items: center;
+  padding: 10px 25px;
+}
+
+.right-block .down-buttons li a {
+  text-decoration: none;
+  font-size: 15px;
+  color: black;
+}
+
+.right-block .down-buttons .with-color {
+  background-color: black;
+}
+
+.right-block .down-buttons .with-color a {
+  color: white;
+}
+.bottom-c-bar{
+  position: absolute;
+  bottom: 25px;
+  width: 100%;
+  display: flex;
+  font-size: 16px;
+  color: rgb(74, 72, 72);
+  justify-content: center;
+}

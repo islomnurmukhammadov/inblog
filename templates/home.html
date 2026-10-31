@@ -1,0 +1,33 @@
+{% extends 'base.html' %} {% load static %} {% block extra_css %}
+<link rel="stylesheet" href="{% static 'style/home.css' %}?v=7" />
+<link rel="stylesheet" href="{% static 'style/mobile/homemobile.css' %}?v=10">
+
+{% endblock extra_css %} {% block content %}
+<div class="home-container">
+  <div class="main-block">
+    <img src="{% static 'img/base.jpeg' %}" alt="" class="main-block-image" />
+    <div class="right-block">
+      <h2>Islom Nurmukhammadov</h2>
+      <p>Software Engineer</p>
+      <ul class="social-links">
+        <li>
+          <a href="{{ links.telegram }}" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+        </li>
+        <li>
+          <a href="{{ links.github }}" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </li>
+        <li>
+          <a href="{{ links.linkedin }}" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        </li>
+      </ul>
+      <ul class="down-buttons">
+        <li class="with-color"><a href="{% url 'blog' %}">Read Blog</a></li>
+        <li><a href="{% url 'about' %}">About Me</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="bottom-c-bar">
+  <p>2026 © Islom Nurmukhammadov</p>
+</div>
+{% endblock content %}

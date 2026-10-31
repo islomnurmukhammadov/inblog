@@ -1,0 +1,60 @@
+header {
+  position: fixed;
+  background: #fff;
+  width: 100%;
+  box-shadow: 2.5px 0px 2.5px 0px rgb(137, 135, 135);
+}
+.main-container{
+    text-align: center;
+    padding-top: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.container{
+  width: 40%;
+  text-align: start;
+}
+
+.container .title{
+
+  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  font-weight: 500;
+  animation: fadeAnimation 0.75s ease-out;
+  padding-bottom: 10px;
+  border-bottom: 0.5px solid rgb(70,70,70);
+
+
+  display: -webkit-flex;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.container .text p{
+  font-size: 17px;
+  color: rgb(57, 54, 54);
+  animation: fadeMiniAnimation 1.5s ease-out;
+  font-family: "DM Sans", sans-serif;
+  letter-spacing: 0.2px;
+    padding-top: 15px;
+}
+
+.container .text p span{
+    font-weight: bold;
+}
+
+.time{
+
+  padding-left: 85%;
+  padding-top: 75px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 300;
+  color: grey;
+  animation: fadeMiniAnimation 2.5s ease-out;
+  padding-bottom: 25px;
+}
+

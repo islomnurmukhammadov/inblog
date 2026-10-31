@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Solutions{% endblock title %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'style/solutions.css' %}?v=7">
+<link rel="stylesheet" href="{% static 'style/mobile/solutionsmobile.css' %}?v=5">
+{% endblock extra_css %}
+
+{% block content %}
+<div class="solutions-main-container">
+    <div class="solutions-container">
+        <h2 class="main-text">SOLUTIONS</h2>
+        <div class="empty"></div>
+        {% for yechim in yechimlar %}
+        <a href="{% url 'solution' yechim.pk %}">
+            <div class="solution-card">
+                <h4 class="solution-title">{{ yechim.title|truncatechars:45 }}</h4>
+                <p class="solution-time">{{ yechim.time }}</p>
+            </div>
+        </a>
+        {% empty %}
+        <div class="empty-text">
+            Hozircha yechimlar yo'q
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock content %}

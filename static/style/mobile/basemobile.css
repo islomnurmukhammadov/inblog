@@ -1,0 +1,21 @@
+@media (max-width: 768px) {
+
+    header{
+        padding: 20px 15px;
+        display: block;
+        flex-direction: column;
+    }
+    header a{
+        font-size: 16px;
+    }
+
+    header ul{
+        padding-top: 5px;
+        gap: 10px;
+    }
+    header ul li a{
+        font-size: 13px;
+    }
+
+    
+}

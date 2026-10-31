@@ -1,0 +1,118 @@
+header {
+  position: fixed;
+  background: #fff;
+  width: 100%;
+  box-shadow: 2.5px 0px 2.5px 0px rgb(137, 135, 135);
+}
+.main-container{
+    text-align: center;
+    padding-top: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.container{
+  width: 40%;
+  text-align: start;
+}
+
+.container .title{
+
+  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  font-weight: 500;
+  animation: fadeAnimation 0.75s ease-out;
+  padding-bottom: 10px;
+  border-bottom: 0.5px solid rgb(70,70,70);
+
+
+  display: -webkit-flex;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.container .question{
+  font-size: 17px;
+  color: rgb(57, 54, 54);
+  animation: fadeMiniAnimation 1.5s ease-out;
+  font-family: "DM Sans", sans-serif;
+  letter-spacing: 0.2px;
+  font-style: italic;
+    padding-top: 15px;
+}
+
+.container .text p span{
+    font-weight: bold;
+}
+
+.time{
+
+  padding-left: 85%;
+  padding-top: 75px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 300;
+  color: grey;
+  animation: fadeMiniAnimation 2.5s ease-out;
+  padding-bottom: 25px;
+}
+.container .code-box{
+
+  animation: fadeMiniAnimation 3s ease-out;
+  background-color: #282c34;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 15px 30px rgb(0, 0, 0, 0.15);
+  margin: 24px 0px;
+}
+
+.code-box .code-top{
+    background-color: #21252b;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid #181a1f;
+}
+.dot{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+.red{background: #ff5f56;}
+.yellow{background: #ffbd2e;}
+.green{background: #27c93f;}
+
+.lang{
+   margin-left: auto;
+   color: #abb2bf;
+   font-size: 12px;
+   font-family: sans-serif; 
+}
+.code-box pre{
+    margin: 0;
+    padding: 15px 0px;
+}
+
+.code-box pre code{
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    font-size: 14px;
+    color: white;
+    line-height: 1.6;
+    padding: 20px !important;
+}
+
+.comment{
+    padding-top: 5px;
+}
+
+.comment p{
+  font-size: 17px;
+  color: rgb(57, 54, 54);
+  animation: fadeMiniAnimation 3.5s ease-out;
+  font-family: "DM Sans", sans-serif;
+  letter-spacing: 0.2px;
+  padding-top: 15px;
+}

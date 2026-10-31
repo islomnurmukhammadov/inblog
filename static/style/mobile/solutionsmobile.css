@@ -1,0 +1,27 @@
+@media (max-width:768px) {
+    .solutions-main-container{
+        padding-top: 17vh;
+    }
+
+    .solutions-container{
+        width: 80%;
+    }
+
+    .solutions-container h2{
+        font-size: 22px;
+    }
+
+    .empty-text{
+        font-size: 14px;
+    }
+
+    .solution-card{
+        padding: 20px 20px;
+    }
+    .solution-card .solution-title{
+        font-size: 14px;
+    }
+    .solution-card .solution-time{
+        font-size: 12px;
+    }
+}

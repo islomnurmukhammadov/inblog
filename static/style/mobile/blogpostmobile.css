@@ -1,0 +1,20 @@
+@media (max-width:768px) {
+    .main-container{
+        padding-top: 17vh;
+    }
+    .container{
+        width: 80%;
+    }
+
+    .container .title{
+        font-size: 22px;
+    }
+    .container .text p{
+        font-size: 15px;
+    }
+
+    .time{
+        padding-left: 60%;
+
+    }
+}

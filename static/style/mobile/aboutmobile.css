@@ -1,0 +1,14 @@
+@media (max-width:768px) {
+    .main-container div{
+        width: 80%;
+    }
+
+    .main-container div h2{
+        font-size: 22px;
+        padding-top: 17vh;
+    }
+
+    .main-container div p{
+        font-size: 15px;
+    }
+}

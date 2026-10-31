@@ -1,0 +1,27 @@
+@media (max-width:768px) {
+    .blogs-main-container{
+        padding-top: 17vh;
+    }
+
+    .blogs-container{
+        width: 80%;
+    }
+
+    .blogs-container h2{
+        font-size: 22px;
+    }
+
+    .empty-text{
+        font-size: 14px;
+    }
+    .post-card{
+        padding: 20px 20px;
+    }
+
+    .post-title{
+        font-size: 14px;
+    }
+    .post-time{
+        font-size: 12px;
+    }
+}

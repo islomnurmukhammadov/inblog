@@ -1,0 +1,41 @@
+header {
+  position: fixed;
+  background: #fff;
+  width: 100%;
+  box-shadow: 2.5px 0px 2.5px 0px rgb(137, 135, 135);
+}
+
+.main-container {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.main-container div {
+  width: 40%;
+  text-align: start;
+}
+
+.main-container div h2 {
+  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
+  padding-top: 10vh;
+  text-align: center;
+  font-weight: 500;
+  animation: fadeAnimation 0.75s ease-out;
+  padding-bottom: 10px;
+  border-bottom: 0.5px solid rgb(70, 70, 70);
+}
+
+.main-container div p {
+  font-size: 17px;
+  color: rgb(57, 54, 54);
+  padding-top: 15px;
+  animation: fadeMiniAnimation 1.5s ease-out;
+  font-family: "DM Sans", sans-serif;
+  letter-spacing: 0.2px;
+}
+
+.main-container div p span {
+  font-weight: bold;
+}
