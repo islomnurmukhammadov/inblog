@@ -1,118 +1,20 @@
-header {
-  position: fixed;
-  background: #fff;
-  width: 100%;
-  box-shadow: 2.5px 0px 2.5px 0px rgb(137, 135, 135);
-}
-.main-container{
-    text-align: center;
-    padding-top: 10vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-
-}
-
-.container{
-  width: 40%;
-  text-align: start;
-}
-
-.container .title{
-
-  font-size: 30px;
-  font-family: "Montserrat", sans-serif;
-  text-align: center;
-  font-weight: 500;
-  animation: fadeAnimation 0.75s ease-out;
-  padding-bottom: 10px;
-  border-bottom: 0.5px solid rgb(70,70,70);
-
-
-  display: -webkit-flex;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.container .question{
-  font-size: 17px;
-  color: rgb(57, 54, 54);
-  animation: fadeMiniAnimation 1.5s ease-out;
-  font-family: "DM Sans", sans-serif;
-  letter-spacing: 0.2px;
-  font-style: italic;
-    padding-top: 15px;
-}
-
-.container .text p span{
-    font-weight: bold;
-}
-
-.time{
-
-  padding-left: 85%;
-  padding-top: 75px;
-  font-family: "DM Sans", sans-serif;
-  font-weight: 300;
-  color: grey;
-  animation: fadeMiniAnimation 2.5s ease-out;
-  padding-bottom: 25px;
-}
-.container .code-box{
-
-  animation: fadeMiniAnimation 3s ease-out;
-  background-color: #282c34;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0px 15px 30px rgb(0, 0, 0, 0.15);
-  margin: 24px 0px;
-}
-
-.code-box .code-top{
-    background-color: #21252b;
-    padding: 10px 16px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    border-bottom: 1px solid #181a1f;
-}
-.dot{
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-}
-.red{background: #ff5f56;}
-.yellow{background: #ffbd2e;}
-.green{background: #27c93f;}
-
-.lang{
-   margin-left: auto;
-   color: #abb2bf;
-   font-size: 12px;
-   font-family: sans-serif; 
-}
-.code-box pre{
-    margin: 0;
-    padding: 15px 0px;
-}
-
-.code-box pre code{
-    font-family: 'JetBrains Mono', 'Fira Code', monospace;
-    font-size: 14px;
-    color: white;
-    line-height: 1.6;
-    padding: 20px !important;
-}
-
-.comment{
-    padding-top: 5px;
-}
-
-.comment p{
-  font-size: 17px;
-  color: rgb(57, 54, 54);
-  animation: fadeMiniAnimation 3.5s ease-out;
-  font-family: "DM Sans", sans-serif;
-  letter-spacing: 0.2px;
-  padding-top: 15px;
-}
+.solution-shell { width: min(820px, calc(100% - 96px)); }
+.solution-article { animation: reveal 500ms ease-out both; }
+.language-tag { display: inline-flex; align-items: center; min-height: 28px; padding: 3px 11px; border: 1px solid #d5dfcb; border-radius: 4px; background: var(--sage); color: var(--green); font-family: var(--mono); font-size: 11px; }
+.solution-section { margin-top: 34px; min-width: 0; }
+.solution-section-heading { display: flex; align-items: baseline; gap: 13px; margin-bottom: 17px; font-family: var(--serif); font-size: 25px; }
+.solution-section-heading > span { color: #6a7b5d; font-family: var(--mono); font-size: 11px; }
+.question { padding: 22px 25px; border-left: 3px solid #a5b992; border-radius: 0 6px 6px 0; background: var(--sage); font-size: 16px; white-space: pre-line; }
+.code-box { overflow: hidden; border: 1px solid #2a4033; border-radius: 9px; background: #1e2b24; box-shadow: 0 9px 22px #1930220a; }
+.code-top { display: flex; align-items: center; gap: 18px; padding: 15px 20px; border-bottom: 1px solid #3b4b40; background: #26382e; }
+.window-dots { display: flex; gap: 6px; }
+.dot { width: 8px; height: 8px; border-radius: 50%; }
+.red { background: #d9887a; }
+.yellow { background: #d4bc76; }
+.green { background: #8ca67b; }
+.code-filename { color: #d5dfcd; font-family: var(--mono); font-size: 11px; }
+.lang { margin-left: auto; color: #a6b69e; font-family: var(--mono); font-size: 9px; letter-spacing: 1px; }
+.code-box pre { max-width: 100%; margin: 0; padding: 25px; overflow-x: auto; color: #e1ecd7; line-height: 1.9; font-size: 13px; tab-size: 4; white-space: pre; scrollbar-color: #71866a #1e2b24; }
+.code-box pre:focus-visible { outline-offset: -4px; }
+.code-box code { font-family: var(--mono); font-size: inherit; }
+.comment > :first-child { margin-top: 0; }
