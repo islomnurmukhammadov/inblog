@@ -1,33 +1,56 @@
-{% extends 'base.html' %} {% load static %} {% block extra_css %}
-<link rel="stylesheet" href="{% static 'style/home.css' %}?v=7" />
-<link rel="stylesheet" href="{% static 'style/mobile/homemobile.css' %}?v=10">
-
-{% endblock extra_css %} {% block content %}
-<div class="home-container">
-  <div class="main-block">
-    <img src="{% static 'img/base.jpeg' %}" alt="" class="main-block-image" />
-    <div class="right-block">
-      <h2>Islom Nurmukhammadov</h2>
-      <p>Software Engineer</p>
-      <ul class="social-links">
-        <li>
-          <a href="{{ links.telegram }}" target="_blank"><i class="fa-brands fa-telegram"></i></a>
-        </li>
-        <li>
-          <a href="{{ links.github }}" target="_blank"><i class="fa-brands fa-github"></i></a>
-        </li>
-        <li>
-          <a href="{{ links.linkedin }}" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-        </li>
-      </ul>
-      <ul class="down-buttons">
-        <li class="with-color"><a href="{% url 'blog' %}">Read Blog</a></li>
-        <li><a href="{% url 'about' %}">About Me</a></li>
-      </ul>
+{% extends 'base.html' %}
+{% load static %}
+{% block nav_home %}aria-current="page"{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'style/home.css' %}?v=20" />
+<link rel="stylesheet" href="{% static 'style/mobile/homemobile.css' %}?v=20" />
+{% endblock extra_css %}
+{% block content %}
+<div class="home-container shell">
+  <section class="hero" aria-labelledby="home-title">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span> Hello, welcome to my corner of the internet</p>
+      <h1 id="home-title">Islom<br />Nurmukhammadov<span class="accent">.</span></h1>
+      <p class="hero-role">Software Engineer <span aria-hidden="true">/</span> <em>Always learning.</em></p>
+      <p class="hero-description">A space for thoughts on software, lessons along the way, and the joy of solving a good problem.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="{% url 'blog' %}">Read the blog <span aria-hidden="true">↗</span></a>
+        <a class="button button-secondary" href="{% url 'about' %}">More about me <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="social-row">
+        <span class="social-label">Find me on</span>
+        <ul class="social-links" aria-label="Social profiles">
+          <li><a href="{{ links.github }}" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a></li>
+          <li><a href="{{ links.telegram }}" target="_blank" rel="noopener noreferrer">Telegram <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a></li>
+          <li><a href="{{ links.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-</div>
-<div class="bottom-c-bar">
-  <p>2026 © Islom Nurmukhammadov</p>
+    <figure class="portrait">
+      <div class="portrait-frame">
+        <img src="{% static 'img/base.jpeg' %}" alt="Islom Nurmukhammadov" width="3024" height="3024" fetchpriority="high" />
+      </div>
+      <span class="portrait-corner" aria-hidden="true">✳</span>
+      <figcaption><span class="status-dot" aria-hidden="true"></span> Learning. Building. Sharing.</figcaption>
+      <span class="portrait-caption" aria-hidden="true">THE PERSON BEHIND THE CODE</span>
+    </figure>
+  </section>
+  <section class="explore" aria-labelledby="explore-title">
+    <div class="section-label"><h2 id="explore-title">A FEW THINGS YOU’LL FIND HERE</h2><span aria-hidden="true">↓</span></div>
+    <div class="explore-grid">
+      <a class="explore-card" href="{% url 'blog' %}">
+        <div class="card-label"><span class="card-number">01</span><span>THE JOURNAL</span><span class="card-arrow" aria-hidden="true">↗</span></div>
+        <h3>Thoughts, put into words.</h3>
+        <p>Notes on development, ideas, and things worth sharing.</p>
+        <span class="card-link">Explore the blog <span aria-hidden="true">→</span></span>
+      </a>
+      <a class="explore-card explore-card-green" href="{% url 'solutions' %}">
+        <div class="card-label"><span class="card-number">02</span><span>PROBLEM SOLVING</span><span class="card-arrow" aria-hidden="true">↗</span></div>
+        <h3>One problem. A new perspective.</h3>
+        <p>Coding challenges, clear explanations, and the code behind them.</p>
+        <span class="card-link">Browse solutions <span aria-hidden="true">→</span></span>
+      </a>
+    </div>
+  </section>
 </div>
 {% endblock content %}

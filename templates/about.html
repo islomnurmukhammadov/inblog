@@ -1,13 +1,29 @@
-{% extends 'base.html' %} {% load static %} {% block title %} About Me
-{%endblock title %} {% block extra_css %}
-<link rel="stylesheet" href="{% static 'style/about.css' %}?v=14" />
-<link rel="stylesheet" href="{% static 'style/mobile/aboutmobile.css' %}?v=5">
-{% endblock extra_css %} {% block content %}
-
-<div class="main-container">
-  <div>
-    <h2>ABOUT ME</h2>
-    {{ text.text|safe }}
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About Me{% endblock title %}
+{% block nav_about %}aria-current="page"{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'style/about.css' %}?v=20" />
+<link rel="stylesheet" href="{% static 'style/mobile/aboutmobile.css' %}?v=20" />
+{% endblock extra_css %}
+{% block content %}
+<div class="about-container shell">
+  <div class="page-heading">
+    <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span> A LITTLE INTRODUCTION</p>
+    <h1>Behind the <em>code.</em></h1>
+    <p class="page-description">Hello, I’m Islom. Welcome to my personal notebook.</p>
+  </div>
+  <div class="about-grid">
+    <aside class="about-profile" aria-label="Author">
+      <img src="{% static 'img/base.jpeg' %}" alt="Islom Nurmukhammadov" width="3024" height="3024" />
+      <div class="profile-caption"><h2>Islom Nurmukhammadov<span class="accent">.</span></h2><p><span class="status-dot" aria-hidden="true"></span> Software Engineer</p></div>
+    </aside>
+    <section class="about-story" aria-labelledby="about-heading">
+      <p class="eyebrow">THE PERSON BEHIND THE NOTEBOOK</p>
+      <h2 id="about-heading">About me</h2>
+      <div class="prose">{{ text.text|safe }}</div>
+      <div class="about-next"><span>More from my corner of the web</span><a class="text-link" href="{% url 'blog' %}">Read the blog <span aria-hidden="true">↗</span></a><a class="text-link" href="{% url 'solutions' %}">Explore solutions <span aria-hidden="true">↗</span></a></div>
+    </section>
   </div>
 </div>
 {% endblock content %}

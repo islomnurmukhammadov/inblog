@@ -1,33 +1,37 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}
-Blog
-{% endblock title %}
-
+{% block title %}Blog{% endblock title %}
+{% block nav_blog %}aria-current="page"{% endblock %}
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'style/blog.css' %}?v=10">
-<link rel="stylesheet" href="{% static 'style/mobile/blogmobile.css' %}?v=7">
+<link rel="stylesheet" href="{% static 'style/blog.css' %}?v=20" />
+<link rel="stylesheet" href="{% static 'style/mobile/blogmobile.css' %}?v=20" />
 {% endblock extra_css %}
-
 {% block content %}
-
-<div class="blogs-main-container">
-    <div class="blogs-container">
-        <h2 class="main-text">BLOG</h2>
-        <div class="empty"></div>
-        {% for post in postlar %}
-        <a href="{% url 'post' post.pk %}">
-            <div class="post-card">
-                <h4 class="post-title">{{ post.title|truncatechars:45 }}</h4>
-                <p class="post-time">{{ post.time }}</p>
-            </div>
-        </a>
-        {% empty %}
-        <div class="empty-text">
-            Hozircha postlar yo'q
-        </div>
-        {% endfor %}
+<div class="blogs-main-container page-shell">
+  <div class="page-heading">
+    <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span> THE JOURNAL</p>
+    <h1>Thoughts &amp; <em>notes.</em></h1>
+    <p class="page-description">On writing software, learning along the way, and connecting the dots.</p>
+  </div>
+  <section class="blogs-container" aria-labelledby="posts-heading">
+    <div class="archive-heading"><h2 id="posts-heading">All articles</h2><span>THE BLOG</span></div>
+    <div class="post-list">
+      {% for post in postlar %}
+      <a class="post-card" href="{% url 'post' post.pk %}">
+        <span class="entry-number" aria-hidden="true">{{ forloop.counter|stringformat:"02d" }}</span>
+        <div class="entry-content"><time class="entry-time" datetime="{{ post.time|date:'Y-m-d' }}">{{ post.time }}</time><h3 class="post-title">{{ post.title }}</h3></div>
+        <span class="entry-arrow" aria-hidden="true">↗</span>
+      </a>
+      {% empty %}
+      <div class="empty-state">
+        <span class="empty-symbol" aria-hidden="true">✎</span>
+        <h3 lang="uz">Hozircha postlar yo‘q</h3>
+        <p>A fresh page. New thoughts will find their way here.</p>
+        <a class="text-link" href="{% url 'home' %}">Back to home <span aria-hidden="true">→</span></a>
+      </div>
+      {% endfor %}
     </div>
+  </section>
+  <a class="page-crosslink" href="{% url 'solutions' %}"><span>Looking for code?</span> Explore the solutions <span aria-hidden="true">→</span></a>
 </div>
-
 {% endblock content %}

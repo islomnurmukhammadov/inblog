@@ -1,23 +1,22 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}
-{{ post_malumoti.title }}
-{% endblock title %}
-
+{% block title %}{{ post_malumoti.title }}{% endblock title %}
+{% block nav_blog %}aria-current="page"{% endblock %}
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'style/blogpost.css' %}?v=6">
-<link rel="stylesheet" href="{% static 'style/mobile/blogpostmobile.css' %}?v=7">
-
+<link rel="stylesheet" href="{% static 'style/blogpost.css' %}?v=20" />
+<link rel="stylesheet" href="{% static 'style/mobile/blogpostmobile.css' %}?v=20" />
 {% endblock extra_css %}
-
 {% block content %}
-
-<div class="main-container">
-    <div class="container">
-        <h2 class="title">{{ post_malumoti.title }}</h2>
-        <div class="text">{{ post_malumoti.text|safe }}</div>
-        <div class="time">{{ post_malumoti.time }}</div>
-    </div>
+<div class="article-shell">
+  <a class="back-link" href="{% url 'blog' %}"><span aria-hidden="true">←</span> All articles</a>
+  <article class="blog-article">
+    <header class="article-header">
+      <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span> FROM THE JOURNAL</p>
+      <h1>{{ post_malumoti.title }}</h1>
+      <div class="article-meta"><img src="{% static 'img/base.jpeg' %}" alt="" width="40" height="40" /><span>Islom Nurmukhammadov</span><span class="meta-divider" aria-hidden="true">/</span><time datetime="{{ post_malumoti.time|date:'Y-m-d' }}">{{ post_malumoti.time }}</time></div>
+    </header>
+    <div class="prose article-body">{{ post_malumoti.text|safe }}</div>
+    <footer class="article-footer"><span>Thanks for reading.</span><a class="text-link" href="{% url 'blog' %}">Back to the journal <span aria-hidden="true">↗</span></a></footer>
+  </article>
 </div>
-
 {% endblock content %}
