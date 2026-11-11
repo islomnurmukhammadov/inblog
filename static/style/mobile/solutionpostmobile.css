@@ -1,28 +1,11 @@
-@media (max-width:768px) {
-    .main-container{
-        padding-top: 17vh;
-    }
-    .container{
-        width: 80%;
-    }
-
-    .container .title{
-        font-size: 22px;
-    }
-    .container .comment p{
-        font-size: 15px;
-    }
-    .container .question{
-        font-size: 15px;
-    }
-
-
-
-    .time{
-        padding-left: 60%;
-
-    }
-    .container .code-box pre code{
-        font-size: 5px;
-    }
+@media (max-width: 768px) {
+  .solution-shell { width: calc(100% - 40px); }
+  .solution-section { margin-top: 29px; }
+  .solution-section-heading { font-size: 23px; }
+  .question { padding: 18px; font-size: 15px; }
+  .code-top { padding: 13px 15px; gap: 12px; }
+  .code-box pre { padding: 20px 16px; font-size: 13px; }
+}
+@media (max-width: 360px) {
+  .lang { display: none; }
 }

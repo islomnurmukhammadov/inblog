@@ -1,39 +1,42 @@
+@media (min-width: 769px) and (max-width: 1100px) {
+  .hero { grid-template-columns: minmax(0, 1fr) 240px; gap: 32px; padding-block: 70px; }
+  .hero h1 { font-size: clamp(38px, 4.6vw, 49px); letter-spacing: -1.9px; }
+  .hero-role { font-size: 14px; gap: 10px; }
+  .hero-role em { font-size: 17px; }
+  .hero .eyebrow { font-size: 8px; letter-spacing: 1px; }
+  .portrait figcaption { font-size: 10px; left: 10px; }
+  .portrait-caption { font-size: 7px; letter-spacing: 1px; }
+}
 @media (max-width: 768px) {
-
-    .home-container{
-        padding-top: 20vh;
-        padding-left: 0;
-
-    }
-    .main-block{
-        display: block;
-        text-align: center;
-    }
-    .main-block-image{
-        width: 15vh;
-        height: 15vh;
-    }
-    .right-block h2{
-        padding-top: 13px;
-        font-size: 20px;
-    }
-    
-    .right-block p{
-        font-size: 15px;
-    }
-    .right-block .social-links{
-        padding-top: 10px;
-        justify-content: center;
-        gap: 13px;
-    }
-    .right-block .social-links li a{
-        font-size: 22px;
-    }
-    .right-block .down-buttons{
-        justify-content: center;
-    }
-
-    .bottom-c-bar{
-        font-size: 14px;
-    }
+  .hero { grid-template-columns: 1fr; gap: 54px; padding: 45px 0 70px; }
+  .hero-copy { max-width: 580px; }
+  .hero h1 { font-size: clamp(36px, 7.6vw, 58px); letter-spacing: -1.7px; margin-top: 21px; }
+  .hero-role { font-size: 14px; gap: 10px; }
+  .hero-role em { font-size: 17px; }
+  .hero-description { max-width: 460px; font-size: 14px; margin-top: 19px; }
+  .hero-actions { margin-top: 25px; gap: 10px; }
+  .button { padding-inline: 17px; gap: 20px; }
+  .social-row { margin-top: 20px; gap: 13px; }
+  .social-links { gap: 16px; }
+  .portrait { max-width: 270px; justify-self: center; }
+  .portrait-frame { aspect-ratio: 0.95; border-top-left-radius: 85px; }
+  .portrait-corner { font-size: 56px; top: -15px; right: -3px; }
+  .portrait-caption { bottom: -29px; }
+  .explore-grid { gap: 16px; }
+  .explore-card { padding: 22px; }
+  .explore-card h3 { font-size: 25px; }
+  .card-label { font-size: 8px; letter-spacing: 1px; }
+}
+@media (max-width: 600px) {
+  .explore-grid { grid-template-columns: 1fr; }
+  .explore-card h3 { margin-top: 20px; }
+  .hero > .hero-copy > .eyebrow { max-width: 320px; font-size: 8px; }
+}
+@media (max-width: 360px) {
+  .hero h1 { font-size: 31px; letter-spacing: -1.4px; }
+  .hero-role { gap: 7px; font-size: 12px; }
+  .hero-role em { font-size: 15px; }
+  .button { padding-inline: 13px; font-size: 11px; gap: 11px; }
+  .social-row { gap: 5px; }
+  .social-links { gap: 14px; }
 }

@@ -1,27 +1,10 @@
-@media (max-width:768px) {
-    .solutions-main-container{
-        padding-top: 17vh;
-    }
-
-    .solutions-container{
-        width: 80%;
-    }
-
-    .solutions-container h2{
-        font-size: 22px;
-    }
-
-    .empty-text{
-        font-size: 14px;
-    }
-
-    .solution-card{
-        padding: 20px 20px;
-    }
-    .solution-card .solution-title{
-        font-size: 14px;
-    }
-    .solution-card .solution-time{
-        font-size: 12px;
-    }
+@media (max-width: 768px) {
+  .solution-card { grid-template-columns: 38px minmax(0, 1fr) 30px; gap: 14px; padding: 23px 0; }
+  .solution-symbol { width: 38px; height: 38px; font-size: 12px; }
+  .solution-title { font-size: 23px; }
+  .solution-card .entry-arrow { width: 30px; height: 30px; font-size: 18px; }
+}
+@media (max-width: 400px) {
+  .solution-card { grid-template-columns: minmax(0, 1fr) 30px; }
+  .solution-symbol { display: none; }
 }

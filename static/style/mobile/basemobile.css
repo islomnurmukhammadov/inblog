@@ -1,21 +1,45 @@
+@media (max-width: 1000px) {
+  .header-note { display: none; }
+}
 @media (max-width: 768px) {
-
-    header{
-        padding: 20px 15px;
-        display: block;
-        flex-direction: column;
-    }
-    header a{
-        font-size: 16px;
-    }
-
-    header ul{
-        padding-top: 5px;
-        gap: 10px;
-    }
-    header ul li a{
-        font-size: 13px;
-    }
-
-    
+  .shell, .page-shell, .article-shell { width: calc(100% - 40px); }
+  .header-inner { min-height: 80px; gap: 20px; }
+  .brand { gap: 9px; }
+  .brand-mark { width: 32px; height: 35px; font-size: 23px; border-radius: 8px 8px 8px 2px; }
+  .brand-name { font-size: 25px; }
+  .site-nav { gap: 21px; }
+  .site-nav a { font-size: 12px; }
+  .page-shell { padding-top: 48px; }
+  .page-heading { margin-bottom: 36px; }
+  .page-heading h1 { font-size: clamp(36px, 7vw, 48px); letter-spacing: -1.5px; }
+  .page-description { font-size: 14px; }
+  .eyebrow { font-size: 9px; letter-spacing: 1.2px; }
+  .archive-heading > span { font-size: 8px; letter-spacing: 0.5px; }
+  .empty-state { padding: 44px 12px; }
+  .empty-state h3 { font-size: 25px; }
+  .empty-state p { font-size: 13px; }
+  .article-shell { padding-top: 27px; }
+  .back-link { margin-bottom: 23px; }
+  .article-header { padding-bottom: 25px; margin-bottom: 26px; }
+  .article-header h1 { font-size: 38px; letter-spacing: -1.2px; }
+  .article-meta { gap: 9px; font-size: 11px; }
+  .prose { font-size: 16px; line-height: 1.85; }
+  .prose h1, .prose h2 { font-size: 27px; }
+  .prose h3 { font-size: 22px; }
+  .prose blockquote { padding: 16px 19px; font-size: 20px; }
+  .prose pre { padding: 17px; }
+  .site-footer { flex-wrap: wrap; gap: 10px 18px; min-height: 100px; padding-block: 20px; margin-top: 48px; font-size: 10px; }
+  .footer-note { margin-left: auto; font-size: 12px; }
+  .footer-brand { display: none; }
+}
+@media (max-width: 480px) {
+  .header-inner { flex-wrap: wrap; justify-content: center; gap: 4px; padding: 18px 0 8px; }
+  .brand { margin-inline: auto; }
+  .site-nav { flex-basis: 100%; justify-content: center; gap: 29px; }
+  .site-nav a { font-size: 12px; }
+  .article-header h1 { font-size: 33px; }
+  .site-footer { justify-content: center; text-align: center; gap: 4px; }
+  .site-footer > p { flex-basis: 100%; }
+  .footer-note { margin-left: 0; }
+  .article-footer { align-items: flex-start; flex-direction: column; gap: 7px; }
 }

@@ -1,20 +1,4 @@
-@media (max-width:768px) {
-    .main-container{
-        padding-top: 17vh;
-    }
-    .container{
-        width: 80%;
-    }
-
-    .container .title{
-        font-size: 22px;
-    }
-    .container .text p{
-        font-size: 15px;
-    }
-
-    .time{
-        padding-left: 60%;
-
-    }
+@media (max-width: 480px) {
+  .blog-article .article-meta time { flex-basis: 100%; padding-left: 45px; }
+  .blog-article .article-meta .meta-divider { display: none; }
 }

@@ -1,14 +1,10 @@
-@media (max-width:768px) {
-    .main-container div{
-        width: 80%;
-    }
-
-    .main-container div h2{
-        font-size: 22px;
-        padding-top: 17vh;
-    }
-
-    .main-container div p{
-        font-size: 15px;
-    }
+@media (max-width: 1000px) {
+  .about-grid { grid-template-columns: 240px minmax(0, 1fr); gap: 40px; }
+}
+@media (max-width: 768px) {
+  .about-container { padding-top: 48px; }
+  .about-grid { grid-template-columns: 1fr; gap: 42px; }
+  .about-profile { width: min(290px, 100%); justify-self: center; }
+  .about-story { padding-top: 0; }
+  .about-story > h2 { font-size: 32px; margin-bottom: 20px; }
 }
